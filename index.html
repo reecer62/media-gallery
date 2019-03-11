@@ -13,8 +13,8 @@
 
     <!-- Here is the main header -->
     <header>
-        <nav>
-            <ul>
+        <nav id="main-nav-wrapper">
+            <ul id="main-nav">
                 <li><a href="javascript:void(0)">Home</a></li>
                 <li><a href="javascript:void(0)">Upload</a></li>
                 <li><a href="javascript:void(0)">Info</a></li>
@@ -26,6 +26,33 @@
 
     <!-- Here is the page's main content -->
     <main>
+
+        <!-- Carousel -->
+        <section class="slideshow">
+            <div class="slideshow-wrapper"> <!-- Start slideshow wrapper --> 
+                <div class="slide fade"> <!-- Image 1 -->
+                    <img src="https://picsum.photos/1280/448/?image=12">
+                </div>
+                <div class="slide fade"> <!-- Image 2 -->
+                    <img src="https://picsum.photos/1280/448/?image=13">
+                </div>
+                <div class="slide fade"> <!-- Image 3 -->
+                    <img src="https://picsum.photos/1280/448/?image=15">
+                </div>
+                <div class="slide fade"> <!-- Image 4 -->
+                    <img src="https://picsum.photos/1280/448/?image=16">
+                </div>
+                <a class="prev">&#10094;</a> <!-- Less than -->
+                <a class="next">&#10095;</a> <!-- Greater than -->
+            </div> <!-- End slideshow wrapper -->
+        </section>      
+        <br />
+        <div class="text-center"> <!-- Overview image row begin -->
+            <span class="indicator"><img src="https://picsum.photos/1280/448/?image=12"/></span>
+            <span class="indicator"><img src="https://picsum.photos/1280/448/?image=13"/></span>
+            <span class="indicator"><img src="https://picsum.photos/1280/448/?image=15"/></span>
+            <span class="indicator"><img src="https://picsum.photos/1280/448/?image=16"/></span>
+        </div> <!-- Overview of images end -->
 
         <!-- It contains an article -->
         <article>
