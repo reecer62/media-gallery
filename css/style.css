@@ -1,0 +1,55 @@
+:root {/*-- Sets color variables --*/
+  --prime: rgb(79, 121, 160);
+  --text: rgb(62, 39, 75);
+  --rev-text: rgb(177, 177, 177);
+  --accent: rgb(68, 199, 255);
+  --bg: rgb(61, 60, 60);
+}
+
+body { /*-- Sets body defaults --*/
+  /* padding: .25rem; */
+  font-size: 16px;
+  color: var(--text);
+  background-color: var(--prime);
+}
+
+i.fas { /*-- adds a little padding left and right on fontawesome icons --*/
+  padding: 0 .33em;
+}
+
+.nav-list { /*-- main navigation element --*/
+  margin-top: -.25rem;
+  padding-bottom: .5rem;
+  background-color: var(--prime);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: stretch;
+  align-content: center;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+}
+
+a.nav-item {
+  position: relative;
+  top: 4px;
+  text-align: center;
+  padding: .75em;
+  margin: auto 0;
+  color: var(--rev-text);
+  transition: color 250ms ease-in-out;
+  text-decoration: none;
+}
+
+a.nav-item:hover {
+  color: var(--accent);
+  cursor: pointer;
+}
+
+.nav-item.trigram {
+  display: none;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
