@@ -1,9 +1,9 @@
 :root {/*-- Sets color variables --*/
-  --prime: rgb(79, 121, 160);
-  --text: rgb(62, 39, 75);
-  --rev-text: rgb(177, 177, 177);
-  --accent: rgb(68, 199, 255);
-  --bg: rgb(61, 60, 60);
+  --prime: #222;
+  --text: #333;
+  --rev-text: #EEE;
+  --accent: #2E9CCA;
+  --bg: #EEE;
 }
 
 body { /*-- Sets body defaults --*/
@@ -17,7 +17,7 @@ i.fas { /*-- adds a little padding left and right on fontawesome icons --*/
   padding: 0 .33em;
 }
 
-.nav-list { /*-- main navigation element --*/
+.topnav { /*-- main navigation element --*/
   margin-top: -.25rem;
   padding-bottom: .5rem;
   background-color: var(--prime);
@@ -47,9 +47,34 @@ a.nav-item:hover {
   cursor: pointer;
 }
 
+.label {
+  font-size: 1rem;
+}
+
 .nav-item.trigram {
   display: none;
   text-decoration: none;
   font-size: 2rem;
 }
 
+/* Trigram */
+@media screen and (max-width: 767px) {
+  .topnav a, .topnav span {display: none;}
+  .topnav a.trigram {display:inherit; position:absolute; right:4%; font-size:2em; padding: .25em; background:var(--prime);}
+}
+
+/* Navigation */
+@media screen and (max-width: 767px) {
+  .topnav.responsive {align-items: center;}
+  .topnav.responsive a, .topnav.responsive span {display:inherit;}
+  .topnav.responsive a:first-child {margin-top:1em;}
+  .topnav.responsive a:not(:last-child) {display:inherit; padding-top:1em;}
+  .topnav.responsive a.more {margin-bottom: 1em;}
+  .topnav.responsive a.trigram {visibility:hidden; transition:none;}
+  .topnav.responsive a.trigram:after {content:'\000D7'; visibility:visible; text-indent: -.5em;}
+}
+
+/* Navigation default config */
+@media screen and (min-width: 768px) {
+  .topnav {display: flex; flex-direction: row; justify-content: space-around;}
+}
