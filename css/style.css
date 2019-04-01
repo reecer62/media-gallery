@@ -346,3 +346,17 @@ button.card-more:hover, button.card-more:active {
 @media screen and (min-width: 1280px) {
   .modal-body {grid-template-columns: 7fr 5fr;}
 }
+
+/* Footer */
+footer {
+  background-color: var(--prime);
+  padding: .25rem;
+  color: var(--rev-text);
+  text-align: center;
+}
+footer a {
+  color: var(--rev-text);
+}
+footer a:hover {
+  color: var(--rev-accent);
+}
