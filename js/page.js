@@ -1,5 +1,6 @@
 /* Global variables */
 var slideIdx = 0;
+var intervalID = null;
 
 /* Toggle navigation bar */
 function navToggle() {
@@ -12,7 +13,10 @@ function navToggle() {
 }
 
 /* Change slide to display slide n */
-function showSlides(n) {
+function showSlides(n, isAuto) {
+    if (!isAuto) { // If slide was manually clicked clear interval
+        intervalManager(false)
+    }
     let slides = document.getElementsByClassName("slide")
     let indicators = document.getElementsByClassName("indicator")
     n >= 0 ? slideIdx = n % slides.length : slideIdx = slides.length-1
@@ -26,7 +30,20 @@ function showSlides(n) {
             indicators[i].classList.remove('active')
         }
     }
+    if (!isAuto) {
+        intervalManager(true, 4000) // Reset the interval
+    }
 }
 
-/* Initially show the first slide */
-showSlides(slideIdx);
+/* Autoslide manager function */
+function intervalManager(flag, time) {
+    if (flag) {
+        intervalID = setInterval(() => showSlides(slideIdx+=1, true), time);
+    } else {
+        clearInterval(intervalID);
+    }
+}
+
+// Initially show the first slide
+showSlides(slideIdx, true);
+intervalManager(true, 4000)
