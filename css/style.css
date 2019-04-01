@@ -206,3 +206,70 @@ a.nav-item:hover {
   .main-grid {grid-template-columns: repeat(4, 1fr);} /*-- 4 columnns --*/
 }
 
+/* Grid - media cards */
+.main-grid-item {
+  border-radius: 4px;
+  padding: .5em;
+  background-color: var(--bg);
+}
+
+.thumb {
+  padding-bottom: 56%;
+  background-size: cover;
+  background-position: center center;
+  border-radius: 4px 4px 0 0;
+}
+
+.one .thumb {background-image: url('https://picsum.photos/300/200/?image=01');}
+.two .thumb {background-image: url('https://picsum.photos/300/200/?image=02');}
+.three .thumb {background-image: url('https://picsum.photos/300/200/?image=03');}
+.four .thumb {background-image: url('https://picsum.photos/300/200/?image=04');}
+.five .thumb {background-image: url('https://picsum.photos/300/200/?image=05');}
+.six .thumb {background-image: url('https://picsum.photos/300/200/?image=06');}
+.seven .thumb {background-image: url('https://picsum.photos/300/200/?image=07');}
+.eight .thumb {background-image: url('https://picsum.photos/300/200/?image=08');}
+.nine .thumb {background-image: url('https://picsum.photos/300/200/?image=09');}
+.ten .thumb {background-image: url('https://picsum.photos/300/200/?image=10');}
+.eleven .thumb {background-image: url('https://picsum.photos/300/200/?image=11');}
+.twelve .thumb {background-image: url('https://picsum.photos/300/200/?image=12');}
+
+.card-content {
+  padding: 0 .5em .7em .5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-title {
+  margin: 1rem 0 0 0;
+  text-transform: uppercase;
+  align-self: flex-start;
+  color: var(--text);
+}
+
+.card-text {
+  font-size: .80em;
+  line-height: 1.2;
+  align-self: flex-start;
+  color: var(--text);
+}
+
+/* Card buttons */
+button.card-more {
+  background: transparent;
+  padding: .45em .7em .4em .7em;
+  border-radius: 200px;
+  font-size: .7em;
+  text-decoration: none;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+button.card-more, button.card-more:visited {
+  color: var(--prime);
+  border: 1.5px solid var(--prime);
+  transition: all 250ms ease-in-out;
+}
+button.card-more:hover, button.card-more:active {
+  color: var(--accent);
+  border-color: var(--accent);
+}
