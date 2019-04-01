@@ -184,3 +184,25 @@ a.nav-item:hover {
 @media only screen and (max-width: 767px) { /* No slideshow on small screens */
   .slideshow {display: none;}
 }
+
+/* Grid */
+.main-grid {
+  margin-top: 3.5rem; 
+  padding: .5rem;
+  display: grid; 
+  grid-gap: 1.5rem; 
+  grid-template-columns: 1fr;
+}
+@media screen and (min-width: 550px) { /*-- at screens between 550 and 767 --*/
+  .main-grid {grid-template-columns: repeat(2, 1fr);}  /*-- 2 columnns --*/
+}
+@media screen and (min-width: 768px) {/*-- at screens between 768 and 989 --*/
+  .main-grid {grid-template-columns: repeat(3, 1fr);} /*-- 3 columnns --*/
+}
+@media screen and (min-width: 990px) {/*-- at screens between 990 and 1271 --*/
+  .main-grid {grid-template-columns: repeat(4, 1fr);} /*-- 4 columnns --*/
+}
+@media screen and (min-width: 1280px) {/*-- at screens 1280 and above --*/
+  .main-grid {grid-template-columns: repeat(4, 1fr);} /*-- 4 columnns --*/
+}
+
