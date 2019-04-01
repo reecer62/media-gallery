@@ -181,7 +181,7 @@ a.nav-item:hover {
   to {opacity: 1}
 }
 
-@media only screen and (max-width: 767px) { /* No slideshow on small screens */
+@media only screen and (max-width: 786px) { /* No slideshow on small screens */
   .slideshow {display: none;}
 }
 
