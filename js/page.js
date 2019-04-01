@@ -1,10 +1,10 @@
 /* Global variables */
-var slideIdx = 0;
-var intervalID = null;
+var slideIdx = 0
+var intervalID = null
 
 /* Toggle navigation bar */
 function navToggle() {
-    let nav = document.getElementById("main-nav");
+    let nav = document.getElementById("main-nav")
     if (!nav.classList.contains('responsive')) {
         nav.classList.add('responsive')
     } else {
@@ -38,12 +38,24 @@ function showSlides(n, isAuto) {
 /* Autoslide manager function */
 function intervalManager(flag, time) {
     if (flag) {
-        intervalID = setInterval(() => showSlides(slideIdx+=1, true), time);
+        intervalID = setInterval(() => showSlides(slideIdx+=1, true), time)
     } else {
-        clearInterval(intervalID);
+        clearInterval(intervalID)
     }
 }
 
+/* Modals */
+$(".button").on("click", function() {
+    let modal = $(this).data("modal")
+    $(modal).show()
+})
+$(".modal").on("click", function(e) {
+    let className = e.target.className
+    if(className === "modal" || className === "close"){
+        $(this).closest(".modal").hide()
+    }
+})
+
 // Initially show the first slide
-showSlides(slideIdx, true);
+showSlides(slideIdx, true)
 intervalManager(true, 4000)
