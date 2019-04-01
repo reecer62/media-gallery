@@ -211,6 +211,7 @@ a.nav-item:hover {
   border-radius: 4px;
   padding: .5em;
   background-color: var(--bg);
+  position: relative;
 }
 
 .thumb {
@@ -235,6 +236,7 @@ a.nav-item:hover {
 
 .card-content {
   padding: 0 .5em .7em .5em;
+  margin: .3em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -256,6 +258,11 @@ a.nav-item:hover {
 
 /* Card buttons */
 button.card-more {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  /* display: block; */
   background: transparent;
   padding: .45em .7em .4em .7em;
   border-radius: 200px;
@@ -263,6 +270,7 @@ button.card-more {
   text-decoration: none;
   cursor: pointer;
   text-transform: uppercase;
+  bottom: 2%;
 }
 button.card-more, button.card-more:visited {
   color: var(--prime);
