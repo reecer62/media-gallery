@@ -22,7 +22,7 @@ i.fas { /*-- adds a little padding left and right on fontawesome icons --*/
   padding-bottom: .5rem;
   background-color: var(--prime);
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
   align-items: stretch;
   align-content: center;
