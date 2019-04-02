@@ -58,13 +58,13 @@ a.nav-item:hover {
 }
 
 /* Trigram */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .topnav a, .topnav span {display: none;}
   .topnav a.trigram {display:inherit; position:absolute; right:4%; font-size:2em; padding: .25em; background:var(--prime);}
 }
 
 /* Navigation */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .topnav.responsive {align-items: center;}
   .topnav.responsive a, .topnav.responsive span {display:inherit;}
   .topnav.responsive a:first-child {margin-top:1em;}
